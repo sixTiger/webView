@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>26F08559-DE7C-457B-978D-8F9AAC95AD08</string>
+	<key>IDESourceControlProjectName</key>
+	<string>webView图文混排</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6E813AE7B3E215C97640D780CB5C3F68EEF1B0A4</key>
+		<string>https://github.com/sixTiger/webView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>webView图文混排/webView图文混排.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6E813AE7B3E215C97640D780CB5C3F68EEF1B0A4</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sixTiger/webView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6E813AE7B3E215C97640D780CB5C3F68EEF1B0A4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6E813AE7B3E215C97640D780CB5C3F68EEF1B0A4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>webView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
