@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *testLable3;
 @property (weak, nonatomic) IBOutlet UITextView *testTextView;
 
+
+@property(nonatomic , strong)NSMutableAttributedString *attributedString;
+
 @end
 
 @implementation ViewController
@@ -29,18 +32,15 @@ static NSString *originStr = @"Hello,我是一个测试程序! flush  Hello,我�
     self.testLable2.numberOfLines = 0;
     self.testLable3.numberOfLines = 0;
     [self test1];
-//    [self test3];
-//    [self test4];
-//    [self test11];
-    
     [self test12];
+    self.testTextView.delegate = self;
 }
 //能够图文混排但是行间距不好弄
 - (void)test1
 {
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     //行间距
-//    paragraphStyle.lineHeightMultiple = 1.5;
+    //    paragraphStyle.lineHeightMultiple = 1.5;
     paragraphStyle.lineSpacing = 10;
     NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"I am a test String 我是一个测试字符 I am a test String 我是一个测试字符I am a test String 我是一个测试字符 I am a test String 我是一个测试字符" ];
     MMTextAttachment * textAttachment = [[ MMTextAttachment alloc ] init] ;
@@ -56,30 +56,9 @@ static NSString *originStr = @"Hello,我是一个测试程序! flush  Hello,我�
     [string addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
     self.testLable.attributedText = string ;
 }
-- (void)test2
-{
-    
-    NSMutableAttributedString *mabstring = [[NSMutableAttributedString alloc]initWithString:@"This is a test of characterAttribute. 中文字符"];
-    // 设置字符类型那个和大小
-    CTFontRef font = CTFontCreateWithName(CFSTR("Georgia"), 40, NULL);
-    [mabstring addAttribute:(id)kCTFontAttributeName value:(__bridge id)font range:NSMakeRange(0, 4)];
-    // 添加下划线
-    [mabstring addAttribute:(id)kCTUnderlineStyleAttributeName value:(id)[NSNumber numberWithInt:kCTUnderlineStyleDouble] range:NSMakeRange(0, 4)];
-    // 设置下滑线的颜色 - 无效
-    [mabstring addAttribute:(id)kCTUnderlineColorAttributeName value:(id)[UIColor redColor].CGColor range:NSMakeRange(0, 4)];
-    
-    // 设置文件的间距
-    long number = 10;
-    
-    CFNumberRef num = CFNumberCreate(kCFAllocatorDefault,kCFNumberSInt8Type,&number);
-    
-    [mabstring addAttribute:(id)kCTKernAttributeName value:(__bridge id)num range:NSMakeRange(10, 4)];
-    self.testLable.attributedText = mabstring;
-}
 
 - (void)test3
 {
-    
     
     //方式一
     
@@ -93,7 +72,7 @@ static NSString *originStr = @"Hello,我是一个测试程序! flush  Hello,我�
     //分段控制，第5个字符开始的3个字符，即第5、6、7字符设置为红色
     [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor purpleColor] range: NSMakeRange(4, 3) ];
     //设置背景颜色
-      [attributedStr addAttribute: NSBackgroundColorAttributeName value: [UIColor redColor] range: NSMakeRange(0, originStr.length)];
+    [attributedStr addAttribute: NSBackgroundColorAttributeName value: [UIColor redColor] range: NSMakeRange(0, originStr.length)];
     // 设置字体的链接属性
     [attributedStr addAttribute: NSLigatureAttributeName value:@(1)  range: NSMakeRange(15, 4)];
     
@@ -388,4 +367,54 @@ static NSString *originStr = @"Hello,我是一个测试程序! flush  Hello,我�
 {
     
 }
+- (void)textViewDidChange:(UITextView *)textView
+{
+    if (textView.text.length <= 0) {
+        textView.attributedText = self.attributedString;
+    }
+    textView.selectedRange = NSMakeRange(textView.text.length - 1,0);
+    NSLog(@"%@",@(textView.text.length));
+}
+
+- (NSMutableAttributedString *)attributedString
+{
+    if (_attributedString == nil)
+    {
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        //行间距
+        //    paragraphStyle.lineHeightMultiple = 1.5;
+        paragraphStyle.lineSpacing = 50;
+        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"I am a test String 我是一个测试字符 I am a test String 我是一个测试字符I am a test String 我是一个测试字符 I am a test String 我是一个测试字符" ];
+        MMTextAttachment * textAttachment = [[ MMTextAttachment alloc ] init] ;
+        UIImage * smileImage = [ UIImage imageNamed:@"load" ]  ;
+        textAttachment.image = smileImage ;
+        NSAttributedString * textAttachmentString = [NSAttributedString  attributedStringWithAttachment:textAttachment ] ;
+        [string insertAttributedString:textAttachmentString atIndex:0 ];
+        
+        [string appendAttributedString:textAttachmentString ];
+        NSRange range;
+        range.location = 0;
+        range.length = string.length;
+        [string addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
+        
+        [string addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:30] range:range];
+        _attributedString = string ;
+    }
+    return _attributedString;
+}
+
+// alignment               对齐方式，取值枚举常量 NSTextAlignment
+// firstLineHeadIndent     首行缩进，取值 float
+// headIndent              缩进，取值 float
+// tailIndent              尾部缩进，取值 float
+// ineHeightMultiple       可变行高,乘因数，取值 float
+// maximumLineHeight       最大行高，取值 float
+// minimumLineHeight       最小行高，取值 float
+// lineSpacing             行距，取值 float
+// paragraphSpacing        段距，取值 float
+// paragraphSpacingBefore  段首空间，取值 float
+//
+// baseWritingDirection    句子方向，取值枚举常量 NSWritingDirection
+// lineBreakMode           断行方式，取值枚举常量 NSLineBreakMode
+// hyphenationFactor       连字符属性，取值 0 - 1
 @end

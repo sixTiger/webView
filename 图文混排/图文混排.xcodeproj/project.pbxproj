@@ -15,6 +15,8 @@
 		0958C8661AE0A0EB00513460 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0958C8641AE0A0EB00513460 /* LaunchScreen.xib */; };
 		0958C8721AE0A0EB00513460 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958C8711AE0A0EB00513460 /* ____Tests.m */; };
 		0958C87D1AE0AEE200513460 /* MMTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958C87C1AE0AEE200513460 /* MMTextAttachment.m */; };
+		0958C8801AE116E600513460 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958C87F1AE116E600513460 /* TwoViewController.m */; };
+		0958C8821AE119CF00513460 /* 荷塘月色.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0958C8811AE119CF00513460 /* 荷塘月色.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		0958C8711AE0A0EB00513460 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
 		0958C87B1AE0AEE200513460 /* MMTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTextAttachment.h; sourceTree = "<group>"; };
 		0958C87C1AE0AEE200513460 /* MMTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTextAttachment.m; sourceTree = "<group>"; };
+		0958C87E1AE116E600513460 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		0958C87F1AE116E600513460 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		0958C8811AE119CF00513460 /* 荷塘月色.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,8 @@
 				0958C8551AE0A0EB00513460 /* Supporting Files */,
 				0958C87B1AE0AEE200513460 /* MMTextAttachment.h */,
 				0958C87C1AE0AEE200513460 /* MMTextAttachment.m */,
+				0958C87E1AE116E600513460 /* TwoViewController.h */,
+				0958C87F1AE116E600513460 /* TwoViewController.m */,
 			);
 			path = "图文混排";
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 		0958C8551AE0A0EB00513460 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0958C8811AE119CF00513460 /* 荷塘月色.txt */,
 				0958C8561AE0A0EB00513460 /* Info.plist */,
 				0958C8571AE0A0EB00513460 /* main.m */,
 			);
@@ -204,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0958C8821AE119CF00513460 /* 荷塘月色.txt in Resources */,
 				0958C8611AE0A0EB00513460 /* Main.storyboard in Resources */,
 				0958C8661AE0A0EB00513460 /* LaunchScreen.xib in Resources */,
 				0958C8631AE0A0EB00513460 /* Images.xcassets in Resources */,
@@ -227,6 +236,7 @@
 				0958C85E1AE0A0EB00513460 /* ViewController.m in Sources */,
 				0958C87D1AE0AEE200513460 /* MMTextAttachment.m in Sources */,
 				0958C85B1AE0A0EB00513460 /* AppDelegate.m in Sources */,
+				0958C8801AE116E600513460 /* TwoViewController.m in Sources */,
 				0958C8581AE0A0EB00513460 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +434,7 @@
 				0958C8771AE0A0EB00513460 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0958C8781AE0A0EB00513460 /* Build configuration list for PBXNativeTarget "图文混排Tests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +443,7 @@
 				0958C87A1AE0A0EB00513460 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
