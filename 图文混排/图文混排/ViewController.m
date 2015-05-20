@@ -31,8 +31,8 @@ static NSString *originStr = @"Hello,我是一个测试程序! flush  Hello,我�
     self.testLable1.numberOfLines = 0;
     self.testLable2.numberOfLines = 0;
     self.testLable3.numberOfLines = 0;
-    [self test1];
-    [self test12];
+    [self test11];
+//    [self test12];
     self.testTextView.delegate = self;
 }
 //能够图文混排但是行间距不好弄
@@ -319,7 +319,7 @@ static NSString *originStr = @"Hello,我是一个测试程序! flush  Hello,我�
 }
 - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange{
     NSLog(@"textView is clicked...");
-    return YES;
+    return NO;
 }
 
 - (void)test12
@@ -417,4 +417,11 @@ static NSString *originStr = @"Hello,我是一个测试程序! flush  Hello,我�
 // baseWritingDirection    句子方向，取值枚举常量 NSWritingDirection
 // lineBreakMode           断行方式，取值枚举常量 NSLineBreakMode
 // hyphenationFactor       连字符属性，取值 0 - 1
+
+//- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
+//    HYBLoadWebviewController *web = [[HYBLoadWebviewController alloc] initWithUrl:url];
+//    web.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:web animated:YES];
+//    return;
+//}
 @end

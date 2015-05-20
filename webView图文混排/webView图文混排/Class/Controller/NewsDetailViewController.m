@@ -89,7 +89,7 @@
         }
         
         NSString *onload = @"this.onclick = function() {"
-        "   window.location.href = 'News:src=' + this.src;"
+        "   window.location.href = 'news:src=' + this.src;"
         "};";
         
         [imgHtml appendFormat:@"<img onload=\"%@\" width=\"%d\" height=\"%d\" src=\"%@\">", onload, width, height, img.src];
