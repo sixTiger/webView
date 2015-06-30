@@ -18,10 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self test7];
+}
+- (void)setSelString:(NSString *)selString
+{
+    _selString = [selString copy];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self performSelectorOnMainThread:sel_registerName(_selString.UTF8String) withObject:nil waitUntilDone:NO];
+    });
 }
 
-- (void)test1
+- (void)test0
 {
     // alignment 对齐方式，取值枚举常量 NSTextAlignment
     
@@ -59,7 +67,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test2
+- (void)test1
 {
     //firstLineHeadIndent 首行缩进，取值 float
     
@@ -88,7 +96,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test3
+- (void)test2
 {
     //headIndent 除了首行之外的行缩进，取值 float
     
@@ -114,7 +122,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test4
+- (void)test3
 {
     //tailIndent 行尾缩进，注意距离是从行首算起
     
@@ -137,7 +145,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test5
+- (void)test4
 {
     //lineHeightMultiple 行高倍数因子，大于1行高变小，小于1行高变小，实际上字体大小不会改变，改变的时行间距
     
@@ -162,7 +170,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test6
+- (void)test5
 {
     //maximumLineHeight 最大行高，若其值小于默认行高，则行间距变小，若其值大于默认行高，则不会引起任何变化
     
@@ -188,7 +196,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test7
+- (void)test6
 {
     //minimumLineHeight 最小行高，若其值大于默认行高，则行间距变大，若其值小于默认行高，则不会引起任何变化
     
@@ -213,7 +221,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test8
+- (void)test7
 {
     //lineSpacing 行距，取值为 float，可正可负，正值增加行距，负值减小行距
     
@@ -239,7 +247,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test9
+- (void)test8
 {
     //paragraphSpacing 段距，取值 float, 负值无效，取0值
     
@@ -265,7 +273,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test10
+- (void)test9
 {
     //paragraphSpacingBefore 段首距离，取值 float , 最小取值为0
     
@@ -292,7 +300,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test11
+- (void)test10
 {
     //baseWritingDirection  //句子排版方向，取值为枚举常量 NSWritingDirection
     //    enum {
@@ -325,7 +333,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test12
+- (void)test11
 {
     //lineBreakMode 断行方式，取值枚举常量 NSLineBreakMode
     
@@ -362,7 +370,7 @@
                                   NSFontAttributeName: [UIFont systemFontOfSize: 12] };
     self.textView2.attributedText = [[NSAttributedString alloc] initWithString: text attributes: attrDict02];
 }
-- (void)test13
+- (void)test12
 {
     //hyphenationFactor 连字符属性，取值 0 到 1 之间，开启断词功能
     

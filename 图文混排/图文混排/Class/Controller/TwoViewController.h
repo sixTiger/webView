@@ -10,4 +10,5 @@
 
 @interface TwoViewController : UIViewController
 
+@property(nonatomic , copy)NSString *selString;
 @end

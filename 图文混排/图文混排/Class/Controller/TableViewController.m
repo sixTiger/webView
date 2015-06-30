@@ -11,6 +11,7 @@
 #import "XXBTabCellModel.h"
 
 #import "ViewController.h"
+#import "TwoViewController.h"
 
 @interface TableViewController ()
 @property(nonatomic , strong)NSMutableArray *dataSourceArray;
@@ -33,7 +34,10 @@
 {
     return self.dataSourceArray.count;
 }
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [NSString stringWithFormat:@"第%@ 组",@(section)];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.dataSourceArray[section] count];
@@ -52,6 +56,13 @@
     if (indexPath.section == 0)
     {
         ViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ViewController"];
+        XXBTabCellModel *TM = self.dataSourceArray[indexPath.section][indexPath.row];
+        vc.selString = TM.selName;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (indexPath.section == 1)
+    {
+        ViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TwoViewController"];
         XXBTabCellModel *TM = self.dataSourceArray[indexPath.section][indexPath.row];
         vc.selString = TM.selName;
         [self.navigationController pushViewController:vc animated:YES];
@@ -79,6 +90,15 @@
         {
             NSMutableArray *data2 = [NSMutableArray array];
             [_dataSourceArray addObject:data2];
+            for (int i = 0; i < 13; i++)
+            {
+                XXBTabCellModel *tabCellModel = [[XXBTabCellModel alloc] init];
+                tabCellModel.className = [TwoViewController class];
+                NSString *string = [NSString stringWithFormat:@"test%d",i];
+                tabCellModel.title = string;
+                tabCellModel.selName = string;
+                [data2 addObject:tabCellModel];
+            }
         }
     }
     return _dataSourceArray;

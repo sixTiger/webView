@@ -309,22 +309,25 @@ static NSString *originStr = @"Hello,我是一个测试程序! flush  Hello,我�
 {
     //创建超链接
     //创建 NSMutableAttributedString
-    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: self.testTextView.text];
+    NSString *string = @"我只是一个测试程序。点我打开百度!!! \n 我只是一个测试程序。";
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString: string];
     //给所有字符设置字体为Zapfino，字体高度为15像素
-    [attributedStr addAttribute: NSFontAttributeName value: [UIFont systemFontOfSize:20] range: NSMakeRange(0, self.testTextView.text.length)];
+    [attributedStr addAttribute: NSFontAttributeName value: [UIFont systemFontOfSize:20] range: NSMakeRange(0, string.length)];
     //添加超链接
-    [attributedStr addAttribute: NSLinkAttributeName value: [NSURL URLWithString: @"http://www.baidu.com"] range: NSMakeRange(0, 20)];
+    [attributedStr addAttribute: NSLinkAttributeName value: [NSURL URLWithString: @"http://www.baidu.com"] range: NSMakeRange(10, 10)];
     
     //分段控制，第0个字符开始的20个字符，即第5、6、7字符设置为红色
     [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor purpleColor] range: NSMakeRange(0, 20) ];
     
     self.testTextView.editable = NO;        //必须禁止输入，否则点击将弹出输入键盘
-    self.testTextView.scrollEnabled = NO;   //可选
+    self.testTextView.scrollEnabled = YES;   //可选
     self.testTextView.delegate = self;      //必须设置，否则代理函数不会被回调
     
     self.testTextView.attributedText = attributedStr;
+    [self.testTextView sizeToFit];
 }
 - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange{
+    [[[UIAlertView alloc] initWithTitle:URL.description message:@"需要打开的链接" delegate:nil cancelButtonTitle:@"I Know" otherButtonTitles: nil] show];
     NSLog(@"textView is clicked...");
     return NO;
 }
