@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0958C8581AE0A0EB00513460 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958C8571AE0A0EB00513460 /* main.m */; };
-		0958C85B1AE0A0EB00513460 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958C85A1AE0A0EB00513460 /* AppDelegate.m */; };
-		0958C85E1AE0A0EB00513460 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958C85D1AE0A0EB00513460 /* ViewController.m */; };
 		0958C8611AE0A0EB00513460 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0958C85F1AE0A0EB00513460 /* Main.storyboard */; };
 		0958C8631AE0A0EB00513460 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0958C8621AE0A0EB00513460 /* Images.xcassets */; };
 		0958C8661AE0A0EB00513460 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0958C8641AE0A0EB00513460 /* LaunchScreen.xib */; };
 		0958C8721AE0A0EB00513460 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958C8711AE0A0EB00513460 /* ____Tests.m */; };
-		0958C87D1AE0AEE200513460 /* MMTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958C87C1AE0AEE200513460 /* MMTextAttachment.m */; };
-		0958C8801AE116E600513460 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0958C87F1AE116E600513460 /* TwoViewController.m */; };
-		0958C8821AE119CF00513460 /* 荷塘月色.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0958C8811AE119CF00513460 /* 荷塘月色.txt */; };
+		62EC61471B41481B00429DD5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EC61391B41481B00429DD5 /* TableViewController.m */; };
+		62EC61481B41481B00429DD5 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EC613B1B41481B00429DD5 /* TwoViewController.m */; };
+		62EC61491B41481B00429DD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EC613D1B41481B00429DD5 /* ViewController.m */; };
+		62EC614A1B41481B00429DD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EC61411B41481B00429DD5 /* AppDelegate.m */; };
+		62EC614B1B41481B00429DD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EC61421B41481B00429DD5 /* main.m */; };
+		62EC614C1B41481B00429DD5 /* 荷塘月色.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62EC61431B41481B00429DD5 /* 荷塘月色.txt */; };
+		62EC614D1B41481B00429DD5 /* MMTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EC61461B41481B00429DD5 /* MMTextAttachment.m */; };
+		62EC61501B41484B00429DD5 /* XXBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EC614F1B41484B00429DD5 /* XXBTableViewCell.m */; };
+		62EC61531B4149E600429DD5 /* XXBTabCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EC61521B4149E600429DD5 /* XXBTabCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +35,28 @@
 /* Begin PBXFileReference section */
 		0958C8521AE0A0EB00513460 /* 图文混排.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图文混排.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0958C8561AE0A0EB00513460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0958C8571AE0A0EB00513460 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0958C8591AE0A0EB00513460 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0958C85A1AE0A0EB00513460 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0958C85C1AE0A0EB00513460 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0958C85D1AE0A0EB00513460 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0958C8601AE0A0EB00513460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0958C8621AE0A0EB00513460 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0958C8651AE0A0EB00513460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0958C86B1AE0A0EB00513460 /* 图文混排Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "图文混排Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0958C8701AE0A0EB00513460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0958C8711AE0A0EB00513460 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
-		0958C87B1AE0AEE200513460 /* MMTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTextAttachment.h; sourceTree = "<group>"; };
-		0958C87C1AE0AEE200513460 /* MMTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTextAttachment.m; sourceTree = "<group>"; };
-		0958C87E1AE116E600513460 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
-		0958C87F1AE116E600513460 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
-		0958C8811AE119CF00513460 /* 荷塘月色.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.txt"; sourceTree = "<group>"; };
+		62EC61381B41481B00429DD5 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		62EC61391B41481B00429DD5 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		62EC613A1B41481B00429DD5 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		62EC613B1B41481B00429DD5 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		62EC613C1B41481B00429DD5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		62EC613D1B41481B00429DD5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		62EC61401B41481B00429DD5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		62EC61411B41481B00429DD5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		62EC61421B41481B00429DD5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62EC61431B41481B00429DD5 /* 荷塘月色.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "荷塘月色.txt"; sourceTree = "<group>"; };
+		62EC61451B41481B00429DD5 /* MMTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTextAttachment.h; sourceTree = "<group>"; };
+		62EC61461B41481B00429DD5 /* MMTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTextAttachment.m; sourceTree = "<group>"; };
+		62EC614E1B41484B00429DD5 /* XXBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBTableViewCell.h; sourceTree = "<group>"; };
+		62EC614F1B41484B00429DD5 /* XXBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBTableViewCell.m; sourceTree = "<group>"; };
+		62EC61511B4149E600429DD5 /* XXBTabCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBTabCellModel.h; sourceTree = "<group>"; };
+		62EC61521B4149E600429DD5 /* XXBTabCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBTabCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,18 +98,11 @@
 		0958C8541AE0A0EB00513460 /* 图文混排 */ = {
 			isa = PBXGroup;
 			children = (
-				0958C8591AE0A0EB00513460 /* AppDelegate.h */,
-				0958C85A1AE0A0EB00513460 /* AppDelegate.m */,
-				0958C85C1AE0A0EB00513460 /* ViewController.h */,
-				0958C85D1AE0A0EB00513460 /* ViewController.m */,
+				62EC61361B41481B00429DD5 /* Class */,
 				0958C85F1AE0A0EB00513460 /* Main.storyboard */,
 				0958C8621AE0A0EB00513460 /* Images.xcassets */,
 				0958C8641AE0A0EB00513460 /* LaunchScreen.xib */,
 				0958C8551AE0A0EB00513460 /* Supporting Files */,
-				0958C87B1AE0AEE200513460 /* MMTextAttachment.h */,
-				0958C87C1AE0AEE200513460 /* MMTextAttachment.m */,
-				0958C87E1AE116E600513460 /* TwoViewController.h */,
-				0958C87F1AE116E600513460 /* TwoViewController.m */,
 			);
 			path = "图文混排";
 			sourceTree = "<group>";
@@ -108,9 +110,7 @@
 		0958C8551AE0A0EB00513460 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0958C8811AE119CF00513460 /* 荷塘月色.txt */,
 				0958C8561AE0A0EB00513460 /* Info.plist */,
-				0958C8571AE0A0EB00513460 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -130,6 +130,61 @@
 				0958C8701AE0A0EB00513460 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62EC61361B41481B00429DD5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				62EC61371B41481B00429DD5 /* Controller */,
+				62EC613E1B41481B00429DD5 /* Model */,
+				62EC613F1B41481B00429DD5 /* Others */,
+				62EC61441B41481B00429DD5 /* View */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		62EC61371B41481B00429DD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				62EC61381B41481B00429DD5 /* TableViewController.h */,
+				62EC61391B41481B00429DD5 /* TableViewController.m */,
+				62EC613A1B41481B00429DD5 /* TwoViewController.h */,
+				62EC613B1B41481B00429DD5 /* TwoViewController.m */,
+				62EC613C1B41481B00429DD5 /* ViewController.h */,
+				62EC613D1B41481B00429DD5 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		62EC613E1B41481B00429DD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62EC61511B4149E600429DD5 /* XXBTabCellModel.h */,
+				62EC61521B4149E600429DD5 /* XXBTabCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		62EC613F1B41481B00429DD5 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				62EC61401B41481B00429DD5 /* AppDelegate.h */,
+				62EC61411B41481B00429DD5 /* AppDelegate.m */,
+				62EC61421B41481B00429DD5 /* main.m */,
+				62EC61431B41481B00429DD5 /* 荷塘月色.txt */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		62EC61441B41481B00429DD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				62EC61451B41481B00429DD5 /* MMTextAttachment.h */,
+				62EC61461B41481B00429DD5 /* MMTextAttachment.m */,
+				62EC614E1B41484B00429DD5 /* XXBTableViewCell.h */,
+				62EC614F1B41484B00429DD5 /* XXBTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0958C8821AE119CF00513460 /* 荷塘月色.txt in Resources */,
+				62EC614C1B41481B00429DD5 /* 荷塘月色.txt in Resources */,
 				0958C8611AE0A0EB00513460 /* Main.storyboard in Resources */,
 				0958C8661AE0A0EB00513460 /* LaunchScreen.xib in Resources */,
 				0958C8631AE0A0EB00513460 /* Images.xcassets in Resources */,
@@ -233,11 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0958C85E1AE0A0EB00513460 /* ViewController.m in Sources */,
-				0958C87D1AE0AEE200513460 /* MMTextAttachment.m in Sources */,
-				0958C85B1AE0A0EB00513460 /* AppDelegate.m in Sources */,
-				0958C8801AE116E600513460 /* TwoViewController.m in Sources */,
-				0958C8581AE0A0EB00513460 /* main.m in Sources */,
+				62EC61491B41481B00429DD5 /* ViewController.m in Sources */,
+				62EC614A1B41481B00429DD5 /* AppDelegate.m in Sources */,
+				62EC61471B41481B00429DD5 /* TableViewController.m in Sources */,
+				62EC614D1B41481B00429DD5 /* MMTextAttachment.m in Sources */,
+				62EC614B1B41481B00429DD5 /* main.m in Sources */,
+				62EC61481B41481B00429DD5 /* TwoViewController.m in Sources */,
+				62EC61531B4149E600429DD5 /* XXBTabCellModel.m in Sources */,
+				62EC61501B41484B00429DD5 /* XXBTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -102,11 +102,14 @@
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    /**
+     *  再这里可以根据contentSize 来计算webView的大小
+     */
     NSLog(@"%@",NSStringFromCGSize(webView.scrollView.contentSize));
-    webView.frame = CGRectMake(0, 64, webView.scrollView.contentSize.width, webView.scrollView.contentSize.height);
-    webView.scrollView.bouncesZoom = NO;
-    webView.scrollView.alwaysBounceHorizontal = NO;
-    webView.scrollView.alwaysBounceVertical = NO;
+//    webView.frame = CGRectMake(0, 64, webView.scrollView.contentSize.width, webView.scrollView.contentSize.height);
+//    webView.scrollView.bouncesZoom = YES;
+//    webView.scrollView.alwaysBounceHorizontal = YES;
+//    webView.scrollView.alwaysBounceVertical = NO;
    
 }
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
