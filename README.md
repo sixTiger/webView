@@ -22,7 +22,7 @@
 ![image](./image/0_9_1.png)<br>
 ![image](./image/0_10.png)<br>
 ### TextView的效果展示
- * 总共有13 种效果
+ * 总共有13 种效果<br>
 ![image](./image/1_0.png)<br>
 ![image](./image/1_1.png)<br>
 ![image](./image/1_2.png)<br>
