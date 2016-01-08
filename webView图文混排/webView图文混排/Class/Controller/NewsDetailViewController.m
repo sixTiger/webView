@@ -18,6 +18,14 @@
 @end
 
 @implementation NewsDetailViewController
+- (instancetype)init
+{
+    if (self = [super init])
+    {
+        [self p_setNavItem];
+    }
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -31,6 +39,33 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failure - %@", error);
     }];
+}
+- (void)p_setNavItem
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"reload" style:UIBarButtonItemStyleBordered target:self action:@selector(p_load)];
+}
+- (void)p_load
+{
+    NSMutableString *html = [NSMutableString string];
+    // 头部内容
+    [html appendString:@"<html>"];
+    [html appendString:@"<head>"];
+    [html appendFormat:@"<link rel=\"stylesheet\" href=\"%@\">", [[NSBundle mainBundle] URLForResource:@"NewsDetail.css" withExtension:nil]];
+    [html appendString:@"</head>"];
+    
+    // 具体内容
+    [html appendString:@"<body>"];
+    
+    // 将图片插入body对应的标记中, 比如<!--IMG#0-->
+    [html appendString:@"NEW"];
+    
+    [html appendString:@"</body>"];
+    
+    // 尾部内容
+    [html appendString:@"</html>"];
+    
+    // 显示网页
+    [self.webView loadHTMLString:html baseURL:nil];
 }
 /**
  *  显示新闻详情数据

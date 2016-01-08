@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "webView&#x56fe;&#x6587;&#x6df7;&#x6392;/Class/Controller/NewsDetailViewController.m"
-            timestampString = "464671569.036872"
+            timestampString = "468758734.072456"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "-webView:shouldStartLoadWithRequest:navigationType:"
             landmarkType = "5">
          </BreakpointContent>
